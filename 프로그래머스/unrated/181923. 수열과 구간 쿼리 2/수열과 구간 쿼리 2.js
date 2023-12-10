@@ -6,15 +6,19 @@ function solution(arr, queries) {
         let start = query[0];
         let end = query[1];
         let k = query[2];
-        let minGreater = -1;
+        let minGreater = Infinity; 
 
         for (let i = start; i <= end; i++) {
-            if (arr[i] > k && (minGreater === -1 || arr[i] < minGreater)) {
+            if (arr[i] > k && arr[i] < minGreater) {
                 minGreater = arr[i];
             }
         }
 
-        answer.push(minGreater);
+        if (minGreater === Infinity) {
+            answer.push(-1);
+        } else {
+            answer.push(minGreater);
+        }
     }
 
     return answer;
