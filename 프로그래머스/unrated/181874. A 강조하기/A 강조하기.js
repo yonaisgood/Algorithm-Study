@@ -1,7 +1,7 @@
 function solution(myString) {
-    var answer = myString;
+    var answer = [...myString];
     
-    answer = answer.split("").map((v,idx)=>{
+    answer = answer.map((v,idx)=>{
         if(v == "a" || v == "A"){
             return "A"
         }
