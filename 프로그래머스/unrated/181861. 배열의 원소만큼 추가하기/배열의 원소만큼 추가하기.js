@@ -1,10 +1,10 @@
 function solution(arr) {
-    var answer = [];
+    let answer = [];
     
-    for(let i = 0; i < arr.length; i++){
-        for(let j = 0; j < arr[i]; j++){
-            answer.push(arr[i])
+    arr.map((a)=>{
+        for(let i = 0; i < a; i++){
+            answer.push(a)
         }
-    }
+    })
     return answer;
 }
