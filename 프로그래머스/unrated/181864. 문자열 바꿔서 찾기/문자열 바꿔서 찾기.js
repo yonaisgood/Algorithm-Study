@@ -1,8 +1,4 @@
-function solution(myString, pat) {
-    let answer = 0;
-    let myArr = [...myString]
+const solution = (myString, pat) => [...myString].map(v=> (v == "A"? "B" : "A")).join("").includes(pat)? 1 : 0;    
     
-    answer = myArr.map(v=> (v == "A"? "B" : "A")).join("")
     
-    return answer.includes(pat)? 1 : 0;
-}
+
