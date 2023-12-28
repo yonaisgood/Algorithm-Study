@@ -1,7 +1,3 @@
 function solution(myString) {    
-    let myArr = myString.split("x").sort();
-    myArr = myArr.filter(v=>v!="") 
-   
- 
-   return myArr;
+    return myString = myString.split("x").sort().filter(v => v != "");
 }
