@@ -1,17 +1,8 @@
-function solution(arr, k) {
-    var answer = [];
-    var usedNumbers = new Set();
-
-    for (let i = 0; i < arr.length; i++) {
-        if (!usedNumbers.has(arr[i])) {
-            answer.push(arr[i]);
-            usedNumbers.add(arr[i]);
-        }
+const solution = (arr, k) => {
+    const set = new Set(arr);
+    const result = [...set].slice(0,k);
+    while(result.length !== k){
+        result.push(-1);
     }
-
-    while (answer.length < k) {
-        answer.push(-1);
-    }
-
-    return answer.slice(0, k);
+    return result;
 }
