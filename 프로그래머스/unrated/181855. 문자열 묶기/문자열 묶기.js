@@ -1,12 +1,27 @@
 function solution(strArr) {
-    const dict={}
-    
-    strArr.forEach(item => {
-        const len = item.length
-        dict[len] = dict[len] ?? []
-        dict[len].push(item)
+    var answer = 0;
+
+    let max = 0;
+
+    strArr.map((a)=>{
+        if(max<a.length){
+            max = a.length
+        }
     })
-    
-    const values = Object.values(dict).map(a => a.length)
-    return Math.max(...values)
+
+    for(let i = 1; i<=max; i++){
+        let count = 0;
+        strArr.map((a)=>{
+            if(a.length == i){
+                count += 1;
+            }
+        })
+        if(count > answer){
+            answer = count;
+        }
+
+    }
+
+
+    return answer;
 }
