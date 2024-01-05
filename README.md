@@ -1,2 +1,2 @@
 # Algorithm-Study-JS
-This is a auto push repository for Baekjoon Online Judge created with [BaekjoonHub](https://github.com/BaekjoonHub/BaekjoonHub).
+JavsScript와 Python을 사용하여 풀이합니다. 
