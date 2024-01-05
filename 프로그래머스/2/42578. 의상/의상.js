@@ -1,18 +1,10 @@
 function solution(clothes) {
-    const clothesObj = {}
-    clothes.forEach(([cloth,type])=>{
-        if(clothesObj[type] === undefined){
-            clothesObj[type] = 1
-        }
-        else{
-            clothesObj[type]++
-        }
-    })
-
-    const clothesCount = Object.entries(clothesObj).reduce((acc,[_,clothesTypeCount])=>{
-        return acc*(clothesTypeCount+1)
-    },1)
-
-    const answer = clothesCount - 1
-    return answer    
+    const types = {};
+    for(const [style, type] of clothes){
+        if(type in types) types[type] +=1;
+        else types[type] = 1;
+    }
+    let sum = 1;
+    for(const type in types) sum *= (types[type] + 1)
+    return sum -1;
 }
