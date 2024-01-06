@@ -1,6 +1,6 @@
 function solution(x) {
     let positionNum = 0;
-    const checkNum = x.toString().split("");
+    const checkNum = x+("").split("");
     for(num of checkNum){
         positionNum += +num 
     }
