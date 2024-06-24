@@ -1,11 +1,6 @@
 function solution(s) {
-    let charactor = s.split("")
+    if (s.length !== 4 && s.length !== 6) return false;
+    let a = s.split("").filter((v)=>!isNaN(v))
     
-        if(s.length == 4 || s.length == 6){
-            for(ch of charactor){
-              if(!(ch >= 0 && ch <= 9))
-                  return false
-            }           
-            return true;
-        }return false;
+    return a.length === s.length ? true : false
 }
