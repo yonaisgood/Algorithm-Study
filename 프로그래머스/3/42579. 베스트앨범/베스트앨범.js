@@ -19,7 +19,7 @@ function solution(genres, plays) {
     let bestAlbum = [];
 
     sortedGenres.forEach(([genre, info]) => {
-        let sortedSongs = info.songs.sort((a, b) => b.play - a.play || a.index - b.index);
+        let sortedSongs = info.songs.sort((a, b) => b.play - a.play);
         bestAlbum.push(sortedSongs[0].index);
         if (sortedSongs[1]) {
             bestAlbum.push(sortedSongs[1].index);
@@ -29,7 +29,4 @@ function solution(genres, plays) {
     return bestAlbum;
 }
 
-// 예제 사용
-let genres = ["classic", "pop", "classic", "classic", "pop"];
-let plays = [500, 600, 150, 800, 2500];
-console.log(solution(genres, plays)); // [4, 1, 3, 0]
+
