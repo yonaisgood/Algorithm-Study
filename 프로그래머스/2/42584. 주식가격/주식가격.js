@@ -4,15 +4,15 @@ function solution(prices) {
     
     for(let i = 0; i < prices.length; i++){
         while(stack.length > 0 && prices[stack[stack.length - 1]] > prices[i]){
-            const j = stack.pop();
-            answer[j] = i - j
+            const last = stack.pop();
+            answer[last] = i - last
         }
         stack.push(i);
     }
     
     while(stack.length > 0){
-        const j = stack.pop()
-        answer[j] = prices.length - 1 - j
+        const last = stack.pop()
+        answer[last] = prices.length - 1 - last
     }
 
     return answer;
